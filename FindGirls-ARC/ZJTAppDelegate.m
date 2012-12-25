@@ -8,6 +8,12 @@
 
 #import "ZJTAppDelegate.h"
 
+#import "ZJTHomeViewController.h"
+#import "ZJTLeftViewController.h"
+#import "ZJTRightViewController.h"
+
+#import "DDMenuController.h"
+
 @implementation ZJTAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -17,7 +23,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    ZJTHomeViewController *homeController = [[ZJTHomeViewController alloc] initWithNibName:@"ZJTHomeViewController" bundle:nil];
+    
+    UINavigationController *mainController = [[UINavigationController alloc] initWithRootViewController:homeController];
+    [mainController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbar_light_background.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:mainController];
+    
+    ZJTLeftViewController *leftController = [[ZJTLeftViewController alloc] initWithNibName:@"ZJTLeftViewController" bundle:nil];
+    
+    rootController.leftViewController = leftController;
+    
+    self.window.rootViewController = rootController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
