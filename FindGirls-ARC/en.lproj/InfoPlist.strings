@@ -1,2 +1,4 @@
 /* Localized versions of Info.plist keys */
-
+//English
+CFBundleDisplayName = "Find Girls";
+"Find Girls" = "Find Girls";

@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GADBannerView.h"
+#import "AFHTTPClient.h"
+#import "ASIFormDataRequest.h"
+#import "UIImageView+WebCache.h"
+#import "JSON.h"
 
-@interface ZJTHomeViewController : UIViewController
+@interface ZJTHomeViewController : UIViewController<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>
+{
+    GADBannerView *bannerView_;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) NSMutableArray *girlsArr;//ZJTGirl
 
 @end

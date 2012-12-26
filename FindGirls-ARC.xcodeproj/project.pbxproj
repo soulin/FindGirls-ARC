@@ -77,6 +77,13 @@
 		9560046E1689CA2100DEB1D2 /* ZJTLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9560046C1689CA2100DEB1D2 /* ZJTLeftViewController.xib */; };
 		956004721689CA4C00DEB1D2 /* ZJTRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 956004701689CA4C00DEB1D2 /* ZJTRightViewController.m */; };
 		956004731689CA4C00DEB1D2 /* ZJTRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956004711689CA4C00DEB1D2 /* ZJTRightViewController.xib */; };
+		956004881689D87B00DEB1D2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956004871689D87B00DEB1D2 /* AudioToolbox.framework */; };
+		95BD429D168B38EE0056D116 /* ImageBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BD429B168B38EE0056D116 /* ImageBG.png */; };
+		95BD429E168B38EE0056D116 /* ImageBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BD429C168B38EE0056D116 /* ImageBG@2x.png */; };
+		95BD42A3168B39470056D116 /* ZJTHomeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD42A1168B39470056D116 /* ZJTHomeTableCell.m */; };
+		95BD42A4168B39470056D116 /* ZJTHomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BD42A2168B39470056D116 /* ZJTHomeTableCell.xib */; };
+		95BD42AA168B43290056D116 /* image_placeholdere@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BD42A9168B43290056D116 /* image_placeholdere@2x.png */; };
+		95BD42AE168B454C0056D116 /* ZJTGirl.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD42AD168B454C0056D116 /* ZJTGirl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +207,24 @@
 		9560046F1689CA4C00DEB1D2 /* ZJTRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTRightViewController.h; sourceTree = "<group>"; };
 		956004701689CA4C00DEB1D2 /* ZJTRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTRightViewController.m; sourceTree = "<group>"; };
 		956004711689CA4C00DEB1D2 /* ZJTRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJTRightViewController.xib; sourceTree = "<group>"; };
+		956004741689D0EC00DEB1D2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		956004791689D37800DEB1D2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9560047F1689D7CA00DEB1D2 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		956004801689D7CA00DEB1D2 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		956004811689D7CA00DEB1D2 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		956004821689D7CA00DEB1D2 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		956004831689D7CA00DEB1D2 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		956004841689D7CA00DEB1D2 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		956004851689D7CA00DEB1D2 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		956004871689D87B00DEB1D2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		95BD429B168B38EE0056D116 /* ImageBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageBG.png; sourceTree = "<group>"; };
+		95BD429C168B38EE0056D116 /* ImageBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ImageBG@2x.png"; sourceTree = "<group>"; };
+		95BD42A0168B39470056D116 /* ZJTHomeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTHomeTableCell.h; sourceTree = "<group>"; };
+		95BD42A1168B39470056D116 /* ZJTHomeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTHomeTableCell.m; sourceTree = "<group>"; };
+		95BD42A2168B39470056D116 /* ZJTHomeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJTHomeTableCell.xib; sourceTree = "<group>"; };
+		95BD42A9168B43290056D116 /* image_placeholdere@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_placeholdere@2x.png"; sourceTree = "<group>"; };
+		95BD42AC168B454C0056D116 /* ZJTGirl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTGirl.h; sourceTree = "<group>"; };
+		95BD42AD168B454C0056D116 /* ZJTGirl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTGirl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956004881689D87B00DEB1D2 /* AudioToolbox.framework in Frameworks */,
 				9560045F1689C8CD00DEB1D2 /* libicucore.dylib in Frameworks */,
 				9560045D1689C8C500DEB1D2 /* libsqlite3.dylib in Frameworks */,
 				9560045B1689C8BF00DEB1D2 /* libz.dylib in Frameworks */,
@@ -231,6 +257,7 @@
 		45E1BDCA16897EB700F86AE0 = {
 			isa = PBXGroup;
 			children = (
+				956004871689D87B00DEB1D2 /* AudioToolbox.framework */,
 				45E1BDE116897EB700F86AE0 /* FindGirls-ARC */,
 				45E1BDD816897EB700F86AE0 /* Frameworks */,
 				45E1BDD616897EB700F86AE0 /* Products */,
@@ -310,6 +337,7 @@
 		956003BD1689C55400DEB1D2 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9560047E1689D7CA00DEB1D2 /* Admob */,
 				956003BE1689C55400DEB1D2 /* AFNetworking */,
 				956003D41689C55400DEB1D2 /* ASIHttpRequest */,
 				956003E91689C55400DEB1D2 /* DDMenuController.h */,
@@ -433,6 +461,8 @@
 		9560040F1689C55400DEB1D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				95BD42AC168B454C0056D116 /* ZJTGirl.h */,
+				95BD42AD168B454C0056D116 /* ZJTGirl.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,6 +492,9 @@
 		956004131689C55400DEB1D2 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
+				95BD42A0168B39470056D116 /* ZJTHomeTableCell.h */,
+				95BD42A1168B39470056D116 /* ZJTHomeTableCell.m */,
+				95BD42A2168B39470056D116 /* ZJTHomeTableCell.xib */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -477,6 +510,9 @@
 		956004151689C55400DEB1D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				95BD42A9168B43290056D116 /* image_placeholdere@2x.png */,
+				95BD429B168B38EE0056D116 /* ImageBG.png */,
+				95BD429C168B38EE0056D116 /* ImageBG@2x.png */,
 				956004161689C55400DEB1D2 /* 37x-Checkmark.png */,
 				956004171689C55400DEB1D2 /* nav_header_bg.png */,
 				956004181689C55400DEB1D2 /* nav_header_bg@2x.png */,
@@ -504,6 +540,20 @@
 				956004711689CA4C00DEB1D2 /* ZJTRightViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9560047E1689D7CA00DEB1D2 /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				9560047F1689D7CA00DEB1D2 /* GADBannerView.h */,
+				956004801689D7CA00DEB1D2 /* GADBannerViewDelegate.h */,
+				956004811689D7CA00DEB1D2 /* GADInterstitial.h */,
+				956004821689D7CA00DEB1D2 /* GADInterstitialDelegate.h */,
+				956004831689D7CA00DEB1D2 /* GADRequest.h */,
+				956004841689D7CA00DEB1D2 /* GADRequestError.h */,
+				956004851689D7CA00DEB1D2 /* libGoogleAdMobAds.a */,
+			);
+			path = Admob;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +592,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 45E1BDCA16897EB700F86AE0;
 			productRefGroup = 45E1BDD616897EB700F86AE0 /* Products */;
@@ -574,6 +626,10 @@
 				956004691689C9F900DEB1D2 /* ZJTHomeViewController.xib in Resources */,
 				9560046E1689CA2100DEB1D2 /* ZJTLeftViewController.xib in Resources */,
 				956004731689CA4C00DEB1D2 /* ZJTRightViewController.xib in Resources */,
+				95BD429D168B38EE0056D116 /* ImageBG.png in Resources */,
+				95BD429E168B38EE0056D116 /* ImageBG@2x.png in Resources */,
+				95BD42A4168B39470056D116 /* ZJTHomeTableCell.xib in Resources */,
+				95BD42AA168B43290056D116 /* image_placeholdere@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +679,8 @@
 				956004681689C9F900DEB1D2 /* ZJTHomeViewController.m in Sources */,
 				9560046D1689CA2100DEB1D2 /* ZJTLeftViewController.m in Sources */,
 				956004721689CA4C00DEB1D2 /* ZJTRightViewController.m in Sources */,
+				95BD42A3168B39470056D116 /* ZJTHomeTableCell.m in Sources */,
+				95BD42AE168B454C0056D116 /* ZJTGirl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +691,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				45E1BDE516897EB700F86AE0 /* en */,
+				956004741689D0EC00DEB1D2 /* zh-Hant */,
+				956004791689D37800DEB1D2 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -695,6 +755,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindGirls-ARC/FindGirls-ARC-Prefix.pch";
 				INFOPLIST_FILE = "FindGirls-ARC/FindGirls-ARC-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FindGirls-ARC/ThirdParty/Admob\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -706,6 +770,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindGirls-ARC/FindGirls-ARC-Prefix.pch";
 				INFOPLIST_FILE = "FindGirls-ARC/FindGirls-ARC-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FindGirls-ARC/ThirdParty/Admob\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
