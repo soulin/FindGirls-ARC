@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45DBC242168BDD3A00B17C93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45DBC244168BDD3A00B17C93 /* Localizable.strings */; };
+		45DBC27F168BF3AC00B17C93 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 45DBC27C168BF3AC00B17C93 /* README */; };
+		45DBC280168BF3AC00B17C93 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DBC27E168BF3AC00B17C93 /* UIImage+Resize.m */; };
 		45E1BDDA16897EB700F86AE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1BDD916897EB700F86AE0 /* UIKit.framework */; };
 		45E1BDDC16897EB700F86AE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1BDDB16897EB700F86AE0 /* Foundation.framework */; };
 		45E1BDDE16897EB700F86AE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1BDDD16897EB700F86AE0 /* CoreGraphics.framework */; };
@@ -87,6 +90,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45DBC243168BDD3A00B17C93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		45DBC245168BDD3E00B17C93 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		45DBC246168BDD3F00B17C93 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		45DBC27C168BF3AC00B17C93 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		45DBC27D168BF3AC00B17C93 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		45DBC27E168BF3AC00B17C93 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		45E1BDD516897EB700F86AE0 /* FindGirls-ARC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindGirls-ARC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E1BDD916897EB700F86AE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		45E1BDDB16897EB700F86AE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -254,6 +263,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45DBC27B168BF3AC00B17C93 /* UIImageResize */ = {
+			isa = PBXGroup;
+			children = (
+				45DBC27C168BF3AC00B17C93 /* README */,
+				45DBC27D168BF3AC00B17C93 /* UIImage+Resize.h */,
+				45DBC27E168BF3AC00B17C93 /* UIImage+Resize.m */,
+			);
+			path = UIImageResize;
+			sourceTree = "<group>";
+		};
 		45E1BDCA16897EB700F86AE0 = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +342,7 @@
 				45E1BDED16897EB700F86AE0 /* Default.png */,
 				45E1BDEF16897EB700F86AE0 /* Default@2x.png */,
 				45E1BDF116897EB700F86AE0 /* Default-568h@2x.png */,
+				45DBC244168BDD3A00B17C93 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -337,6 +357,7 @@
 		956003BD1689C55400DEB1D2 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				45DBC27B168BF3AC00B17C93 /* UIImageResize */,
 				9560047E1689D7CA00DEB1D2 /* Admob */,
 				956003BE1689C55400DEB1D2 /* AFNetworking */,
 				956003D41689C55400DEB1D2 /* ASIHttpRequest */,
@@ -630,6 +651,8 @@
 				95BD429E168B38EE0056D116 /* ImageBG@2x.png in Resources */,
 				95BD42A4168B39470056D116 /* ZJTHomeTableCell.xib in Resources */,
 				95BD42AA168B43290056D116 /* image_placeholdere@2x.png in Resources */,
+				45DBC242168BDD3A00B17C93 /* Localizable.strings in Resources */,
+				45DBC27F168BF3AC00B17C93 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,12 +704,23 @@
 				956004721689CA4C00DEB1D2 /* ZJTRightViewController.m in Sources */,
 				95BD42A3168B39470056D116 /* ZJTHomeTableCell.m in Sources */,
 				95BD42AE168B454C0056D116 /* ZJTGirl.m in Sources */,
+				45DBC280168BF3AC00B17C93 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		45DBC244168BDD3A00B17C93 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45DBC243168BDD3A00B17C93 /* en */,
+				45DBC245168BDD3E00B17C93 /* zh-Hant */,
+				45DBC246168BDD3F00B17C93 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		45E1BDE416897EB700F86AE0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

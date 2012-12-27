@@ -409,6 +409,7 @@
         [nNavBtn addTarget:self action:@selector(showLeft:) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *nBtnItem = [[UIBarButtonItem alloc] initWithCustomView:nNavBtn];
         topController.navigationItem.leftBarButtonItem = nBtnItem;
+        topController.navigationController.navigationBar.titleTextAttributes = Nav_TitleTextAttributes;
     } else {
 		if(topController.navigationItem.leftBarButtonItem.target == self) {
 			topController.navigationItem.leftBarButtonItem = nil;

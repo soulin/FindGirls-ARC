@@ -21,3 +21,5 @@
 
 //300x250
 #define MY_BANNER_UNIT_ID @"19404ad8687c4792"
+
+#define Nav_TitleTextAttributes [NSDictionary dictionaryWithObjectsAndKeys: [UIColor darkGrayColor],      UITextAttributeTextColor, [UIFont boldSystemFontOfSize:20], UITextAttributeFont, [UIColor clearColor],         UITextAttributeTextShadowColor,nil];
