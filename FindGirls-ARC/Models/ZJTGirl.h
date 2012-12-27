@@ -13,11 +13,25 @@
 @property (nonatomic,strong) NSURL *imageURL;
 @property (nonatomic,strong) NSString *uploadUserName;
 @property (nonatomic,strong) NSDate *uploadDate;
+@property (nonatomic,strong) NSString *displayTime;
 
 @property (nonatomic,assign) CGFloat width;
 @property (nonatomic,assign) CGFloat height;
 
 -(id)initWithDictionary:(NSDictionary*)dict;
 -(void)updateWithDictionary:(NSDictionary*)dict;
+
+
+-(CGFloat)heightForWidth:(CGFloat)width;
+
+-(CGFloat)widthForHeight:(CGFloat)height;
+
+-(CGSize)sizeForHeight:(CGFloat)height;
+
+-(CGSize)sizeForWidth:(CGFloat)width;
+
+-(CGRect)rectForWidth:(CGFloat)width;
+
+-(CGRect)rectForHeight:(CGFloat)height;
 
 @end

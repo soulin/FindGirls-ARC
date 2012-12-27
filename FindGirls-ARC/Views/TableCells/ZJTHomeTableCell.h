@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZJTGirl;
+
 @interface ZJTHomeTableCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *BGImageView;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rowLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
 
 -(void)setup;
+
+-(void)updateWithGirl:(ZJTGirl*)girl index:(NSInteger)row;
 
 @end

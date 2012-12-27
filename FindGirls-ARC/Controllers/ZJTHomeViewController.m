@@ -58,7 +58,14 @@
     }
     for (NSDictionary *eachDict in girls) {
         ZJTGirl *girl = [[ZJTGirl alloc] initWithDictionary:eachDict];
-        [_girlsArr addObject:girl];
+        if ([girl.imageURL.absoluteString hasSuffix:@".gif"] ||
+            [girl.imageURL.absoluteString hasSuffix:@".GIF"])
+        {
+            
+        }
+        else {
+            [_girlsArr addObject:girl];
+        }
     }
     
     [_table reloadData];
@@ -68,6 +75,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [[SDImageCache sharedImageCache] clearMemory];
 }
 
 
@@ -86,14 +94,37 @@
         [cell setup];
     }
     
-    ZJTGirl *girl = [_girlsArr objectAtIndex:indexPath.row];
-    [cell.contentImageView setImageWithURL:girl.imageURL placeholderImage:nil options:SDWebImageProgressiveDownload];
+    ZJTGirl *girl = nil;
+    if (_girlsArr && indexPath.row < _girlsArr.count) {
+        girl = [_girlsArr objectAtIndex:indexPath.row];
+    }
+    [cell updateWithGirl:girl index:indexPath.row];
+    
+    [cell.contentImageView setImageWithURL:girl.imageURL
+                                      size:CGSizeZero//[girl sizeForWidth:300]
+                          placeholderImage:nil
+                                   options:SDWebImageRetryFailed
+                                  progress:^(NSUInteger receivedSize, long long expectedSize){
+                                      NSLog(@"%f",((float)receivedSize / (float)expectedSize));
+                                  }
+                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType){
+                                     NSLog(@"%@",NSStringFromCGSize(image.size));
+                                     NSLog(@"wid = %f hei = %f",girl.width,girl.height);
+                                     NSLog(@"cell.contentImageView = %@",NSStringFromCGRect(cell.contentImageView.frame));
+                                     NSLog(@"[girl heightForWidth:280] = %f",[girl heightForWidth:280]);
+                                     
+                                 }];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 286;
+    ZJTGirl *girl = nil;
+    if (_girlsArr && indexPath.row < _girlsArr.count) {
+        girl = [_girlsArr objectAtIndex:indexPath.row];
+    }
+    NSLog(@"heightForWidth %f",[girl heightForWidth:280]);
+    return [girl heightForWidth:280] + 72;
 }
 
 @end

@@ -17,6 +17,7 @@
     #import "ASIFormDataRequest.h"
     #import "UIImageView+WebCache.h"
     #import "JSON.h"
+    #import "SDImageCache.h"
 #endif
 
 //300x250

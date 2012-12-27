@@ -10,6 +10,8 @@
 		45DBC242168BDD3A00B17C93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45DBC244168BDD3A00B17C93 /* Localizable.strings */; };
 		45DBC27F168BF3AC00B17C93 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 45DBC27C168BF3AC00B17C93 /* README */; };
 		45DBC280168BF3AC00B17C93 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DBC27E168BF3AC00B17C93 /* UIImage+Resize.m */; };
+		45DBC285168BF63A00B17C93 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DBC281168BF63900B17C93 /* SDWebImageCompat.m */; };
+		45DBC286168BF63A00B17C93 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DBC283168BF63A00B17C93 /* SDWebImageDownloaderOperation.m */; };
 		45E1BDDA16897EB700F86AE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1BDD916897EB700F86AE0 /* UIKit.framework */; };
 		45E1BDDC16897EB700F86AE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1BDDB16897EB700F86AE0 /* Foundation.framework */; };
 		45E1BDDE16897EB700F86AE0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E1BDDD16897EB700F86AE0 /* CoreGraphics.framework */; };
@@ -96,6 +98,10 @@
 		45DBC27C168BF3AC00B17C93 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		45DBC27D168BF3AC00B17C93 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		45DBC27E168BF3AC00B17C93 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		45DBC281168BF63900B17C93 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		45DBC282168BF63900B17C93 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		45DBC283168BF63A00B17C93 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		45DBC284168BF63A00B17C93 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
 		45E1BDD516897EB700F86AE0 /* FindGirls-ARC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindGirls-ARC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E1BDD916897EB700F86AE0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		45E1BDDB16897EB700F86AE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -457,10 +463,14 @@
 		956003FC1689C55400DEB1D2 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				45DBC282168BF63900B17C93 /* SDWebImageDownloaderOperation.h */,
+				45DBC283168BF63A00B17C93 /* SDWebImageDownloaderOperation.m */,
+				45DBC284168BF63A00B17C93 /* SDWebImageOperation.h */,
 				956003FD1689C55400DEB1D2 /* SDImageCache.h */,
 				956003FE1689C55400DEB1D2 /* SDImageCache.m */,
 				956003FF1689C55400DEB1D2 /* SDImageCacheDelegate.h */,
 				956004001689C55400DEB1D2 /* SDWebImageCompat.h */,
+				45DBC281168BF63900B17C93 /* SDWebImageCompat.m */,
 				956004011689C55400DEB1D2 /* SDWebImageDecoder.h */,
 				956004021689C55400DEB1D2 /* SDWebImageDecoder.m */,
 				956004031689C55400DEB1D2 /* SDWebImageDownloader.h */,
@@ -705,6 +715,8 @@
 				95BD42A3168B39470056D116 /* ZJTHomeTableCell.m in Sources */,
 				95BD42AE168B454C0056D116 /* ZJTGirl.m in Sources */,
 				45DBC280168BF3AC00B17C93 /* UIImage+Resize.m in Sources */,
+				45DBC285168BF63A00B17C93 /* SDWebImageCompat.m in Sources */,
+				45DBC286168BF63A00B17C93 /* SDWebImageDownloaderOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
