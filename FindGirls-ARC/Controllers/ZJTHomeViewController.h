@@ -13,10 +13,11 @@
 #import "UIImageView+WebCache.h"
 #import "JSON.h"
 
-@interface ZJTHomeViewController : UIViewController<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface ZJTHomeViewController : UIViewController<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate,GADBannerViewDelegate>
 {
-    GADBannerView *bannerView_;
+    
 }
+@property (strong, nonatomic) GADBannerView *bannerView;
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSMutableArray *girlsArr;//ZJTGirl
