@@ -11,6 +11,8 @@
 @class ZJTGirl;
 @class YLProgressBar;
 
+@protocol ZJTHomeTableCellDelegate;
+
 @interface ZJTHomeTableCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
@@ -20,9 +22,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *rowLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
 @property (assign,nonatomic) float progress;
+@property (weak,nonatomic,) id<ZJTHomeTableCellDelegate>delegate;
 
 -(void)setup;
 
 -(void)updateWithGirl:(ZJTGirl*)girl index:(NSInteger)row;
+
+@end
+
+
+@protocol ZJTHomeTableCellDelegate <NSObject>
+
+@optional
+-(void)homeCell:(ZJTHomeTableCell*)cell
+     imageTaped:(UITapGestureRecognizer*)tap;
 
 @end

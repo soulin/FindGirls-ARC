@@ -19,6 +19,7 @@
     #import "JSON.h"
 #import "SDImageCache.h"
 #import "ZJTConfigration.h"
+#import "UINavigationControllerForiOS6.h"
 #endif
 
 //300x250

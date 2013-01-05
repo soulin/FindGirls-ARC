@@ -13,11 +13,24 @@
 #import "UIImageView+WebCache.h"
 #import "JSON.h"
 #import "EGORefreshTableHeaderView.h"
+#import "ZJTHomeTableCell.h"
+#import "MWPhotoBrowser.h"
 
-@interface ZJTHomeViewController : UIViewController<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate,GADBannerViewDelegate,EGORefreshTableHeaderDelegate>
+@interface ZJTHomeViewController : UIViewController
+<
+ASIHTTPRequestDelegate,
+UITableViewDataSource,
+UITableViewDelegate,
+GADBannerViewDelegate,
+EGORefreshTableHeaderDelegate,
+ZJTHomeTableCellDelegate,
+MWPhotoBrowserDelegate
+>
 {    
 	EGORefreshTableHeaderView *_refreshHeaderView;
 	BOOL _reloading;
+    
+    UIImage *_tapImage;
 }
 @property (strong, nonatomic) GADBannerView *bannerView;
 

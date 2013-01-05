@@ -8,9 +8,9 @@
 
 #import "ZJTHomeViewController.h"
 #import "AFJSONRequestOperation.h"
-#import "ZJTHomeTableCell.h"
 #import "ZJTLoadMoreCell.h"
 #import "ZJTGirl.h"
+#import "UINavigationController_OritationYes.h"
 
 enum
 {
@@ -37,6 +37,7 @@ enum
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.titleTextAttributes = Nav_TitleTextAttributes;
     _table.separatorStyle = UITableViewCellSeparatorStyleNone;
     _table.backgroundColor = [UIColor colorWithRed:245.0/255.0
                                                        green:245.0/255.0
@@ -150,6 +151,7 @@ enum
             NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"ZJTHomeTableCell" owner:self options:nil];
             cell = [nibs objectAtIndex:0];
             [cell setup];
+            cell.delegate = self;
         }
         
         ZJTGirl *girl = nil;
@@ -209,6 +211,32 @@ enum
     }
 }
 
+-(void)homeCell:(ZJTHomeTableCell*)cell
+     imageTaped:(UITapGestureRecognizer*)tap
+{
+    _tapImage = cell.contentImageView.image;
+    if (_tapImage == nil) {
+        return;
+    }
+    
+    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    
+    UINavigationControllerForiOS6 *nc = [[UINavigationControllerForiOS6 alloc] initWithRootViewController:browser];
+    browser.displayActionButton = YES;
+    
+    nc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//    [self.navigationController pushViewController:browser animated:YES];
+    [self presentModalViewController:nc animated:YES];
+}
+
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return 1;
+}
+
+- (MWPhoto *)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    return [[MWPhoto alloc] initWithImage:_tapImage];
+}
+
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
@@ -257,5 +285,13 @@ enum
 	
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return NO;
+}
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
 
 @end

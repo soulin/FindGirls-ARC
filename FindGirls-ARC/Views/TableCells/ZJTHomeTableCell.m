@@ -20,6 +20,10 @@
 {
     _BGImageView.image = [[UIImage imageNamed:@"image_placeholdere@2x.png"] stretchableImageWithLeftCapWidth:150 topCapHeight:50];
     _progressBar.progressTintColor = [UIColor whiteColor];
+    
+    _contentImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTaped:)];
+    [_contentImageView addGestureRecognizer:tap];
 }
 
 -(void)updateWithGirl:(ZJTGirl*)girl index:(NSInteger)row
@@ -53,8 +57,14 @@
     else {
         _progressBar.hidden = NO;
         _progressLabel.hidden = NO;
+    }    
+}
+
+-(void)imageTaped:(id)sender
+{
+    if ([_delegate respondsToSelector:@selector(homeCell:imageTaped:)]) {
+        [_delegate homeCell:self imageTaped:sender];
     }
-    
 }
 
 @end

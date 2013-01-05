@@ -91,6 +91,16 @@
     _pan = nil;
 }
 
+-(BOOL)shouldAutorotate
+{
+    return [_root shouldAutorotate];
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return [_root supportedInterfaceOrientations];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return [_root shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
 }

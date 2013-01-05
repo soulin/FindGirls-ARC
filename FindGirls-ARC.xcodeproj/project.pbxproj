@@ -23,6 +23,15 @@
 		45E1BDF016897EB700F86AE0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E1BDEF16897EB700F86AE0 /* Default@2x.png */; };
 		45E1BDF216897EB700F86AE0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E1BDF116897EB700F86AE0 /* Default-568h@2x.png */; };
 		45E1BDF516897EB700F86AE0 /* FindGirls_ARC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45E1BDF316897EB700F86AE0 /* FindGirls_ARC.xcdatamodeld */; };
+		9506948F16983B8A00D5289E /* MWCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948316983B8A00D5289E /* MWCaptionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9506949016983B8A00D5289E /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948516983B8A00D5289E /* MWPhoto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9506949116983B8A00D5289E /* MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948716983B8A00D5289E /* MWPhotoBrowser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9506949216983B8A00D5289E /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948A16983B8A00D5289E /* MWTapDetectingImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9506949316983B8A00D5289E /* MWTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948C16983B8A00D5289E /* MWTapDetectingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9506949416983B8A00D5289E /* MWZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948E16983B8A00D5289E /* MWZoomingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		950694E41698698400D5289E /* UINavigationController_OritationYes.m in Sources */ = {isa = PBXBuildFile; fileRef = 950694E31698698400D5289E /* UINavigationController_OritationYes.m */; };
+		950694E71698699D00D5289E /* UINavigationController_OritationNo.m in Sources */ = {isa = PBXBuildFile; fileRef = 950694E61698699D00D5289E /* UINavigationController_OritationNo.m */; };
+		950694EA16986EAD00D5289E /* UINavigationControllerForiOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = 950694E916986EAD00D5289E /* UINavigationControllerForiOS6.m */; };
 		9560041F1689C55400DEB1D2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 956003C01689C55400DEB1D2 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		956004201689C55400DEB1D2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 956003C21689C55400DEB1D2 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		956004211689C55400DEB1D2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 956003C41689C55400DEB1D2 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -134,6 +143,25 @@
 		45E1BDEF16897EB700F86AE0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		45E1BDF116897EB700F86AE0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		45E1BDF416897EB700F86AE0 /* FindGirls_ARC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindGirls_ARC.xcdatamodel; sourceTree = "<group>"; };
+		9506948216983B8A00D5289E /* MWCaptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCaptionView.h; sourceTree = "<group>"; };
+		9506948316983B8A00D5289E /* MWCaptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCaptionView.m; sourceTree = "<group>"; };
+		9506948416983B8A00D5289E /* MWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhoto.h; sourceTree = "<group>"; };
+		9506948516983B8A00D5289E /* MWPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhoto.m; sourceTree = "<group>"; };
+		9506948616983B8A00D5289E /* MWPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoBrowser.h; sourceTree = "<group>"; };
+		9506948716983B8A00D5289E /* MWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhotoBrowser.m; sourceTree = "<group>"; };
+		9506948816983B8A00D5289E /* MWPhotoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoProtocol.h; sourceTree = "<group>"; };
+		9506948916983B8A00D5289E /* MWTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTapDetectingImageView.h; sourceTree = "<group>"; };
+		9506948A16983B8A00D5289E /* MWTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingImageView.m; sourceTree = "<group>"; };
+		9506948B16983B8A00D5289E /* MWTapDetectingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTapDetectingView.h; sourceTree = "<group>"; };
+		9506948C16983B8A00D5289E /* MWTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingView.m; sourceTree = "<group>"; };
+		9506948D16983B8A00D5289E /* MWZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWZoomingScrollView.h; sourceTree = "<group>"; };
+		9506948E16983B8A00D5289E /* MWZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWZoomingScrollView.m; sourceTree = "<group>"; };
+		950694E21698698400D5289E /* UINavigationController_OritationYes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationController_OritationYes.h; sourceTree = "<group>"; };
+		950694E31698698400D5289E /* UINavigationController_OritationYes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationController_OritationYes.m; sourceTree = "<group>"; };
+		950694E51698699D00D5289E /* UINavigationController_OritationNo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationController_OritationNo.h; sourceTree = "<group>"; };
+		950694E61698699D00D5289E /* UINavigationController_OritationNo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationController_OritationNo.m; sourceTree = "<group>"; };
+		950694E816986EAD00D5289E /* UINavigationControllerForiOS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerForiOS6.h; sourceTree = "<group>"; };
+		950694E916986EAD00D5289E /* UINavigationControllerForiOS6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerForiOS6.m; sourceTree = "<group>"; };
 		956003BF1689C55400DEB1D2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		956003C01689C55400DEB1D2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		956003C11689C55400DEB1D2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -399,6 +427,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9506948116983B8A00D5289E /* MWPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				9506948216983B8A00D5289E /* MWCaptionView.h */,
+				9506948316983B8A00D5289E /* MWCaptionView.m */,
+				9506948416983B8A00D5289E /* MWPhoto.h */,
+				9506948516983B8A00D5289E /* MWPhoto.m */,
+				9506948616983B8A00D5289E /* MWPhotoBrowser.h */,
+				9506948716983B8A00D5289E /* MWPhotoBrowser.m */,
+				9506948816983B8A00D5289E /* MWPhotoProtocol.h */,
+				9506948916983B8A00D5289E /* MWTapDetectingImageView.h */,
+				9506948A16983B8A00D5289E /* MWTapDetectingImageView.m */,
+				9506948B16983B8A00D5289E /* MWTapDetectingView.h */,
+				9506948C16983B8A00D5289E /* MWTapDetectingView.m */,
+				9506948D16983B8A00D5289E /* MWZoomingScrollView.h */,
+				9506948E16983B8A00D5289E /* MWZoomingScrollView.m */,
+			);
+			path = MWPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		956003BC1689C55400DEB1D2 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +457,7 @@
 		956003BD1689C55400DEB1D2 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				9506948116983B8A00D5289E /* MWPhotoBrowser */,
 				45DBC27B168BF3AC00B17C93 /* UIImageResize */,
 				9560047E1689D7CA00DEB1D2 /* Admob */,
 				956003BE1689C55400DEB1D2 /* AFNetworking */,
@@ -554,6 +603,12 @@
 			children = (
 				957369C816957C75002D1EAE /* ZJTConfigration.h */,
 				957369C916957C75002D1EAE /* ZJTConfigration.m */,
+				950694E816986EAD00D5289E /* UINavigationControllerForiOS6.h */,
+				950694E916986EAD00D5289E /* UINavigationControllerForiOS6.m */,
+				950694E21698698400D5289E /* UINavigationController_OritationYes.h */,
+				950694E31698698400D5289E /* UINavigationController_OritationYes.m */,
+				950694E51698699D00D5289E /* UINavigationController_OritationNo.h */,
+				950694E61698699D00D5289E /* UINavigationController_OritationNo.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -807,6 +862,15 @@
 				957369CA16957C75002D1EAE /* ZJTConfigration.m in Sources */,
 				95FE43811697FF1400B92222 /* YLProgressBar.m in Sources */,
 				95FE439E16980BF000B92222 /* EGORefreshTableHeaderView.m in Sources */,
+				9506948F16983B8A00D5289E /* MWCaptionView.m in Sources */,
+				9506949016983B8A00D5289E /* MWPhoto.m in Sources */,
+				9506949116983B8A00D5289E /* MWPhotoBrowser.m in Sources */,
+				9506949216983B8A00D5289E /* MWTapDetectingImageView.m in Sources */,
+				9506949316983B8A00D5289E /* MWTapDetectingView.m in Sources */,
+				9506949416983B8A00D5289E /* MWZoomingScrollView.m in Sources */,
+				950694E41698698400D5289E /* UINavigationController_OritationYes.m in Sources */,
+				950694E71698699D00D5289E /* UINavigationController_OritationNo.m in Sources */,
+				950694EA16986EAD00D5289E /* UINavigationControllerForiOS6.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,6 +957,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindGirls-ARC/FindGirls-ARC-Prefix.pch";
 				INFOPLIST_FILE = "FindGirls-ARC/FindGirls-ARC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FindGirls-ARC/ThirdParty/Admob\"",
@@ -908,6 +973,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindGirls-ARC/FindGirls-ARC-Prefix.pch";
 				INFOPLIST_FILE = "FindGirls-ARC/FindGirls-ARC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FindGirls-ARC/ThirdParty/Admob\"",

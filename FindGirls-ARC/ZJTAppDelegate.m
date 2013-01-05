@@ -13,6 +13,7 @@
 #import "ZJTRightViewController.h"
 
 #import "DDMenuController.h"
+#import "UINavigationController_OritationNo.h"
 
 @implementation ZJTAppDelegate
 
@@ -26,16 +27,16 @@
     
     ZJTHomeViewController *homeController = [[ZJTHomeViewController alloc] initWithNibName:@"ZJTHomeViewController" bundle:nil];
     
-    UINavigationController *mainController = [[UINavigationController alloc] initWithRootViewController:homeController];
+    UINavigationControllerForiOS6 *mainController = [[UINavigationControllerForiOS6 alloc] initWithRootViewController:homeController];
     [mainController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbar_light_background.png"] forBarMetrics:UIBarMetricsDefault];
     
-    DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:mainController];
+//    DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:mainController];
+//    
+//    ZJTLeftViewController *leftController = [[ZJTLeftViewController alloc] initWithNibName:@"ZJTLeftViewController" bundle:nil];
+//    
+//    rootController.leftViewController = leftController;
     
-    ZJTLeftViewController *leftController = [[ZJTLeftViewController alloc] initWithNibName:@"ZJTLeftViewController" bundle:nil];
-    
-    rootController.leftViewController = leftController;
-    
-    self.window.rootViewController = rootController;
+    self.window.rootViewController = mainController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
