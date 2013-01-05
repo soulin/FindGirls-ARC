@@ -8,6 +8,7 @@
 
 #import "ZJTHomeTableCell.h"
 #import "ZJTGirl.h"
+#import "YLProgressBar.h"
 
 @interface ZJTHomeTableCell ()
 
@@ -18,10 +19,7 @@
 -(void)setup
 {
     _BGImageView.image = [[UIImage imageNamed:@"image_placeholdere@2x.png"] stretchableImageWithLeftCapWidth:150 topCapHeight:50];
-//    self.contentView.backgroundColor = [UIColor colorWithRed:245.0/255.0
-//                                                       green:245.0/255.0
-//                                                        blue:241.0/255.0
-//                                                       alpha:1.0];
+    _progressBar.progressTintColor = [UIColor whiteColor];
 }
 
 -(void)updateWithGirl:(ZJTGirl*)girl index:(NSInteger)row
@@ -39,6 +37,24 @@
     NSLog(@"contentImageView = %@",NSStringFromCGRect(_contentImageView.frame));
     
     NSLog(@"BGImageView = %@",NSStringFromCGRect(_BGImageView.frame));
+}
+
+-(void)setProgress:(float)progress
+{
+    if (progress == -0) {
+        progress = 0;
+    }
+    _progressBar.progress = progress;
+    _progressLabel.text = [NSString stringWithFormat:@"%.0f%%", (progress * 100)];
+    if (progress == 1.0) {
+        _progressBar.hidden = YES;
+        _progressLabel.hidden = YES;
+    }
+    else {
+        _progressBar.hidden = NO;
+        _progressLabel.hidden = NO;
+    }
+    
 }
 
 @end

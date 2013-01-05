@@ -102,6 +102,10 @@
 		95BD42A4168B39470056D116 /* ZJTHomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BD42A2168B39470056D116 /* ZJTHomeTableCell.xib */; };
 		95BD42AA168B43290056D116 /* image_placeholdere@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BD42A9168B43290056D116 /* image_placeholdere@2x.png */; };
 		95BD42AE168B454C0056D116 /* ZJTGirl.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD42AD168B454C0056D116 /* ZJTGirl.m */; };
+		95FE43811697FF1400B92222 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FE43801697FF1400B92222 /* YLProgressBar.m */; };
+		95FE439A16980BC800B92222 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95FE439816980BC800B92222 /* blackArrow.png */; };
+		95FE439B16980BC800B92222 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95FE439916980BC800B92222 /* blackArrow@2x.png */; };
+		95FE439E16980BF000B92222 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FE439D16980BF000B92222 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -270,6 +274,13 @@
 		95BD42A9168B43290056D116 /* image_placeholdere@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_placeholdere@2x.png"; sourceTree = "<group>"; };
 		95BD42AC168B454C0056D116 /* ZJTGirl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTGirl.h; sourceTree = "<group>"; };
 		95BD42AD168B454C0056D116 /* ZJTGirl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTGirl.m; sourceTree = "<group>"; };
+		95FE437F1697FF1400B92222 /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
+		95FE43801697FF1400B92222 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
+		95FE43871697FF4B00B92222 /* ARCMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCMacro.h; sourceTree = "<group>"; };
+		95FE439816980BC800B92222 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		95FE439916980BC800B92222 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		95FE439C16980BF000B92222 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		95FE439D16980BF000B92222 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,13 +413,18 @@
 				9560047E1689D7CA00DEB1D2 /* Admob */,
 				956003BE1689C55400DEB1D2 /* AFNetworking */,
 				956003D41689C55400DEB1D2 /* ASIHttpRequest */,
-				956003E91689C55400DEB1D2 /* DDMenuController.h */,
-				956003EA1689C55400DEB1D2 /* DDMenuController.m */,
-				956003EB1689C55400DEB1D2 /* MBProgressHUD.h */,
-				956003EC1689C55400DEB1D2 /* MBProgressHUD.m */,
 				956003ED1689C55400DEB1D2 /* Reachability */,
 				956003F01689C55400DEB1D2 /* SBJson */,
 				956003FC1689C55400DEB1D2 /* SDWebImage */,
+				956003E91689C55400DEB1D2 /* DDMenuController.h */,
+				956003EA1689C55400DEB1D2 /* DDMenuController.m */,
+				95FE43871697FF4B00B92222 /* ARCMacro.h */,
+				95FE437F1697FF1400B92222 /* YLProgressBar.h */,
+				95FE43801697FF1400B92222 /* YLProgressBar.m */,
+				956003EB1689C55400DEB1D2 /* MBProgressHUD.h */,
+				956003EC1689C55400DEB1D2 /* MBProgressHUD.m */,
+				95FE439C16980BF000B92222 /* EGORefreshTableHeaderView.h */,
+				95FE439D16980BF000B92222 /* EGORefreshTableHeaderView.m */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -594,6 +610,8 @@
 				9560041C1689C55400DEB1D2 /* slide_navigator_button@2x.png */,
 				9560041D1689C55400DEB1D2 /* slide_navigator_button_pressed.png */,
 				9560041E1689C55400DEB1D2 /* slide_navigator_button_pressed@2x.png */,
+				95FE439816980BC800B92222 /* blackArrow.png */,
+				95FE439916980BC800B92222 /* blackArrow@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -729,6 +747,8 @@
 				957369A816953E6B002D1EAE /* Icon@2x.png in Resources */,
 				957369B51695570A002D1EAE /* ZJTLoadMoreCell.xib in Resources */,
 				957369C31695659C002D1EAE /* README.txt in Resources */,
+				95FE439A16980BC800B92222 /* blackArrow.png in Resources */,
+				95FE439B16980BC800B92222 /* blackArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +805,8 @@
 				45DBC286168BF63A00B17C93 /* SDWebImageDownloaderOperation.m in Sources */,
 				957369B41695570A002D1EAE /* ZJTLoadMoreCell.m in Sources */,
 				957369CA16957C75002D1EAE /* ZJTConfigration.m in Sources */,
+				95FE43811697FF1400B92222 /* YLProgressBar.m in Sources */,
+				95FE439E16980BF000B92222 /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

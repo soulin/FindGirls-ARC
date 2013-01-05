@@ -42,6 +42,10 @@ enum
                                                        green:245.0/255.0
                                                         blue:241.0/255.0
                                                        alpha:1.0];
+    
+    [self setupPullDownRefreshView];
+    
+    //ADs
     if ([ZJTConfigration sharedConfigration].hasAD) {
         CGRect frame = _table.frame;
         frame.size.height = self.view.bounds.size.height - 50;
@@ -54,6 +58,21 @@ enum
         frame.size.height = self.view.bounds.size.height;
         _table.frame = frame;
     }
+}
+
+-(void)setupPullDownRefreshView
+{
+    
+	if (_refreshHeaderView == nil) {
+		
+		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - _table.bounds.size.height, self.view.frame.size.width, _table.bounds.size.height)];
+		view.delegate = self;
+		[_table addSubview:view];
+		_refreshHeaderView = view;		
+	}
+	
+	//  update the last update date
+	[_refreshHeaderView refreshLastUpdatedDate];
 }
 
 -(void)loadData
@@ -104,7 +123,7 @@ enum
             [_girlsArr addObject:girl];
         }
     }
-    
+    [self doneLoadingTableViewData];
     [_table reloadData];
 }
 
@@ -144,6 +163,8 @@ enum
                               placeholderImage:nil
                                        options:SDWebImageRetryFailed
                                       progress:^(NSUInteger receivedSize, long long expectedSize){
+                                          float progress = ((float)receivedSize / (float)expectedSize);
+                                          cell.progress = progress;
                                           NSLog(@"%f",((float)receivedSize / (float)expectedSize));
                                       }
                                      completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType){
@@ -185,9 +206,56 @@ enum
 {
     if (indexPath.row == _girlsArr.count) {
         [self loadData];
-//        ZJTLoadMoreCell *loadCell = (ZJTLoadMoreCell*)cell;
-//        [loadCell setup];
     }
 }
+
+#pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)reloadTableViewDataSource{
+	_reloading = YES;
+    
+    if (_girlsArr) {
+        [_girlsArr removeAllObjects];
+    }
+	[self loadData];
+}
+
+- (void)doneLoadingTableViewData{
+	_reloading = NO;
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:_table];	
+}
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{	
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];	
+}
+
+
+#pragma mark -
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{	
+	[self reloadTableViewDataSource];
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+	
+	return _reloading; // should return if data source model is reloading
+	
+}
+
+- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+	
+	return [NSDate date]; // should return date data source was last changed
+	
+}
+
 
 @end

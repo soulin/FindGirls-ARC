@@ -12,14 +12,19 @@
 #import "ASIFormDataRequest.h"
 #import "UIImageView+WebCache.h"
 #import "JSON.h"
+#import "EGORefreshTableHeaderView.h"
 
-@interface ZJTHomeViewController : UIViewController<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate,GADBannerViewDelegate>
-{
-    
+@interface ZJTHomeViewController : UIViewController<ASIHTTPRequestDelegate,UITableViewDataSource,UITableViewDelegate,GADBannerViewDelegate,EGORefreshTableHeaderDelegate>
+{    
+	EGORefreshTableHeaderView *_refreshHeaderView;
+	BOOL _reloading;
 }
 @property (strong, nonatomic) GADBannerView *bannerView;
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSMutableArray *girlsArr;//ZJTGirl
+
+- (void)reloadTableViewDataSource;
+- (void)doneLoadingTableViewData;
 
 @end
