@@ -40,9 +40,9 @@
 @synthesize delegate=_delegate;
 
 
-- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor  {
+- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor table:(UITableView*)table  {
     if((self = [super initWithFrame:frame])) {
-		
+		self.superTable = table;
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		self.backgroundColor = [UIColor colorWithRed:245.0/255.0
                                                green:245.0/255.0
@@ -102,12 +102,22 @@
 	
 }
 
-- (id)initWithFrame:(CGRect)frame  {
-  return [self initWithFrame:frame arrowImageName:@"blackArrow.png" textColor:TEXT_COLOR];
+- (id)initWithFrame:(CGRect)frame  table:(UITableView*)table{
+  return [self initWithFrame:frame arrowImageName:@"blackArrow.png" textColor:TEXT_COLOR table:table];
 }
 
 #pragma mark -
 #pragma mark Setters
+
+-(void)startRefresh
+{    
+//    [self setState:EGOOPullRefreshLoading];
+//    [_superTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:0.2];
+//    _superTable.contentInset = UIEdgeInsetsMake(60.0f, 0.0f, 0.0f, 0.0f);
+//    [UIView commitAnimations];
+}
 
 - (void)refreshLastUpdatedDate {
 	
@@ -227,7 +237,7 @@
 		if ([_delegate respondsToSelector:@selector(egoRefreshTableHeaderDidTriggerRefresh:)]) {
 			[_delegate egoRefreshTableHeaderDidTriggerRefresh:self];
 		}
-		
+        
 		[self setState:EGOOPullRefreshLoading];
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.2];

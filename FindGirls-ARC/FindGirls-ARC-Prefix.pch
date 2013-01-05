@@ -22,6 +22,8 @@
 #import "UINavigationControllerForiOS6.h"
 #endif
 
+#define NAVIGATION_BAR_BTN_RECT         CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)
+
 //300x250
 #define MY_BANNER_UNIT_ID @"a150e52d3c917ca"
 

@@ -17,7 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (weak, nonatomic) IBOutlet YLProgressBar *progressBar;
-@property (weak, nonatomic) IBOutlet UIImageView *BGImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *BGImageViewTop;
+@property (weak, nonatomic) IBOutlet UIImageView *BGImageViewBottom;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rowLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;

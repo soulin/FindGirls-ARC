@@ -18,7 +18,9 @@
 
 -(void)setup
 {
-    _BGImageView.image = [[UIImage imageNamed:@"image_placeholdere@2x.png"] stretchableImageWithLeftCapWidth:150 topCapHeight:50];
+    _BGImageViewTop.image = [[UIImage imageNamed:@"image_placeholdere_top.png"] stretchableImageWithLeftCapWidth:150 topCapHeight:6];
+    
+    _BGImageViewBottom.image = [[UIImage imageNamed:@"image_placeholdere_bottom.png"] stretchableImageWithLeftCapWidth:150 topCapHeight:0];
     _progressBar.progressTintColor = [UIColor whiteColor];
     
     _contentImageView.userInteractionEnabled = YES;
@@ -29,18 +31,24 @@
 -(void)updateWithGirl:(ZJTGirl*)girl index:(NSInteger)row
 {
     self.timeLabel.text = girl.displayTime;
+    _timeLabel.hidden = YES;
     self.rowLabel.text  = [NSString stringWithFormat:@"#%d",row + 1];
     
     CGRect frame = self.contentImageView.frame;
     frame.size.height = [girl heightForWidth:280];
     self.contentImageView.frame = frame;
     
-    frame = self.BGImageView.frame;
-    frame.size.height = self.contentImageView.frame.size.height + 24;
-    self.BGImageView.frame = frame;
+    frame = self.BGImageViewTop.frame;
+    frame.size.height = self.contentImageView.frame.size.height + 24 - 10;
+    self.BGImageViewTop.frame = frame;
+    
+    frame = self.BGImageViewBottom.frame;
+    frame.origin.y = _contentImageView.frame.origin.y + _contentImageView.frame.size.height;
+    self.BGImageViewBottom.frame = frame;
+    
     NSLog(@"contentImageView = %@",NSStringFromCGRect(_contentImageView.frame));
     
-    NSLog(@"BGImageView = %@",NSStringFromCGRect(_BGImageView.frame));
+//    NSLog(@"BGImageView = %@",NSStringFromCGRect(_BGImageView.frame));
 }
 
 -(void)setProgress:(float)progress

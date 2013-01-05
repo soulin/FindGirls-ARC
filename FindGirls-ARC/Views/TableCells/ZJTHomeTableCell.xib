@@ -44,10 +44,10 @@
 							<object class="IBUIImageView" id="786284890">
 								<reference key="NSNextResponder" ref="174755693"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{13, 35}, {295, 238}}</string>
+								<string key="NSFrame">{{13, 35}, {295, 187}}</string>
 								<reference key="NSSuperview" ref="174755693"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="680219195"/>
+								<reference key="NSNextKeyView" ref="584200522"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIRestorationIdentifier">cb</string>
@@ -115,6 +115,7 @@
 								<string key="NSFrame">{{56, 145}, {208, 9}}</string>
 								<reference key="NSSuperview" ref="174755693"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="1062210806"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -125,6 +126,7 @@
 								<string key="NSFrame">{{127, 86}, {67, 33}}</string>
 								<reference key="NSSuperview" ref="174755693"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="137757008"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -153,13 +155,23 @@
 								<string key="NSFrame">{{20, 43}, {280, 214}}</string>
 								<reference key="NSSuperview" ref="174755693"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="137757008"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
+							<object class="IBUIImageView" id="1062210806">
+								<reference key="NSNextResponder" ref="174755693"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{13, 230}, {295, 17}}</string>
+								<reference key="NSSuperview" ref="174755693"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="680219195"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 273}</string>
+						<string key="NSFrameSize">{320, 272}</string>
 						<reference key="NSSuperview" ref="959697349"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="8481632"/>
@@ -175,7 +187,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 274}</string>
+				<string key="NSFrameSize">{320, 273}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="174755693"/>
@@ -193,14 +205,6 @@
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<array class="NSMutableArray" key="connectionRecords">
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">BGImageView</string>
-						<reference key="source" ref="959697349"/>
-						<reference key="destination" ref="786284890"/>
-					</object>
-					<int key="connectionID">7</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">timeLabel</string>
@@ -241,6 +245,22 @@
 					</object>
 					<int key="connectionID">23</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">BGImageViewTop</string>
+						<reference key="source" ref="959697349"/>
+						<reference key="destination" ref="786284890"/>
+					</object>
+					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">BGImageViewBottom</string>
+						<reference key="source" ref="959697349"/>
+						<reference key="destination" ref="1062210806"/>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -271,6 +291,7 @@
 							<reference ref="8481632"/>
 							<reference ref="137757008"/>
 							<reference ref="584200522"/>
+							<reference ref="1062210806"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -278,7 +299,7 @@
 						<int key="objectID">5</int>
 						<reference key="object" ref="786284890"/>
 						<reference key="parent" ref="959697349"/>
-						<string key="objectName">BG Image View</string>
+						<string key="objectName">BG Image View  top</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
@@ -308,6 +329,12 @@
 						<reference key="object" ref="584200522"/>
 						<reference key="parent" ref="959697349"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">24</int>
+						<reference key="object" ref="1062210806"/>
+						<reference key="parent" ref="959697349"/>
+						<string key="objectName">Image View bottom</string>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -320,6 +347,7 @@
 				<string key="17.CustomClassName">YLProgressBar</string>
 				<string key="17.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.CustomClassName">ZJTHomeTableCell</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -329,7 +357,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">23</int>
+			<int key="maxID">26</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -345,7 +373,8 @@
 					<string key="className">ZJTHomeTableCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="BGImageView">UIImageView</string>
+						<string key="BGImageViewBottom">UIImageView</string>
+						<string key="BGImageViewTop">UIImageView</string>
 						<string key="contentImageView">UIImageView</string>
 						<string key="progressBar">YLProgressBar</string>
 						<string key="progressLabel">UILabel</string>
@@ -353,8 +382,12 @@
 						<string key="timeLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="BGImageView">
-							<string key="name">BGImageView</string>
+						<object class="IBToOneOutletInfo" key="BGImageViewBottom">
+							<string key="name">BGImageViewBottom</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="BGImageViewTop">
+							<string key="name">BGImageViewTop</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="contentImageView">

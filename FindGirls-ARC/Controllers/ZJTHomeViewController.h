@@ -15,6 +15,7 @@
 #import "EGORefreshTableHeaderView.h"
 #import "ZJTHomeTableCell.h"
 #import "MWPhotoBrowser.h"
+#import "MBProgressHUD.h"
 
 @interface ZJTHomeViewController : UIViewController
 <
@@ -36,6 +37,8 @@ MWPhotoBrowserDelegate
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSMutableArray *girlsArr;//ZJTGirl
+
+@property (strong,nonatomic) MBProgressHUD *progressHUD;
 
 - (void)reloadTableViewDataSource;
 - (void)doneLoadingTableViewData;

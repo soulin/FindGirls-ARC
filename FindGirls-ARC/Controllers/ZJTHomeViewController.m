@@ -36,6 +36,7 @@ enum
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.titleTextAttributes = Nav_TitleTextAttributes;
+    _table.scrollsToTop = YES;
     _table.separatorStyle = UITableViewCellSeparatorStyleNone;
     _table.backgroundColor = [UIColor colorWithRed:245.0/255.0
                                                        green:245.0/255.0
@@ -43,6 +44,7 @@ enum
                                                        alpha:1.0];
     
     [self setupPullDownRefreshView];
+    [self setupBarButtons];
     
     //ADs
     if ([ZJTConfigration sharedConfigration].hasAD) {
@@ -59,12 +61,21 @@ enum
     }
 }
 
+-(void)setupBarButtons
+{
+    UIButton *nNavBtn = [[UIButton alloc] initWithFrame:NAVIGATION_BAR_BTN_RECT];
+    [nNavBtn setImage:[UIImage imageNamed:@"refresh.png"] forState:UIControlStateNormal];
+    [nNavBtn addTarget:self action:@selector(reloadTableViewDataSource) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *nBtnItem = [[UIBarButtonItem alloc] initWithCustomView:nNavBtn];
+    self.navigationItem.rightBarButtonItem = nBtnItem;
+}
+
 -(void)setupPullDownRefreshView
 {
     
 	if (_refreshHeaderView == nil) {
 		
-		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - _table.bounds.size.height, self.view.frame.size.width, _table.bounds.size.height)];
+		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - _table.bounds.size.height, self.view.frame.size.width, _table.bounds.size.height) table:_table];
 		view.delegate = self;
 		[_table addSubview:view];
 		_refreshHeaderView = view;		
@@ -123,7 +134,15 @@ enum
         }
     }
     [self doneLoadingTableViewData];
+    [self hideProgressHUD:YES];
     [_table reloadData];
+    if (_girlsArr.count <= 25) {
+        [_table beginUpdates];
+        [_table scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                      atScrollPosition:UITableViewScrollPositionTop
+                              animated:YES];
+        [_table endUpdates];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -240,6 +259,7 @@ enum
 
 - (void)reloadTableViewDataSource{
 	_reloading = YES;
+    [self showProgressHUDWithMessage:[NSString stringWithFormat:@"%@\u2026" , NSLocalizedString(@"Updating", @"Displayed with ellipsis as 'Copying...' when an item is in the process of being copied")]];    
     
     if (_girlsArr) {
         [_girlsArr removeAllObjects];
@@ -291,5 +311,46 @@ enum
 {
     return NO;
 }
+
+#pragma mark - MBProgressHUD
+
+- (MBProgressHUD *)progressHUD {
+    if (!_progressHUD) {
+        _progressHUD = [[MBProgressHUD alloc] initWithView:self.view];
+        _progressHUD.minSize = CGSizeMake(120, 120);
+        _progressHUD.minShowTime = 1;
+        // The sample image is based on the
+        // work by: http://www.pixelpressicons.com
+        // licence: http://creativecommons.org/licenses/by/2.5/ca/
+        self.progressHUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MWPhotoBrowser.bundle/images/Checkmark.png"]];
+        [self.view addSubview:_progressHUD];
+    }
+    return _progressHUD;
+}
+
+- (void)showProgressHUDWithMessage:(NSString *)message {
+    self.progressHUD.labelText = message;
+    self.progressHUD.mode = MBProgressHUDModeIndeterminate;
+    [self.progressHUD show:YES];
+    self.navigationController.navigationBar.userInteractionEnabled = NO;
+}
+
+- (void)hideProgressHUD:(BOOL)animated {
+    [self.progressHUD hide:animated];
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+}
+
+- (void)showProgressHUDCompleteMessage:(NSString *)message {
+    if (message) {
+        if (self.progressHUD.isHidden) [self.progressHUD show:YES];
+        self.progressHUD.labelText = message;
+        self.progressHUD.mode = MBProgressHUDModeCustomView;
+        [self.progressHUD hide:YES afterDelay:1.5];
+    } else {
+        [self.progressHUD hide:YES];
+    }
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+}
+
 
 @end

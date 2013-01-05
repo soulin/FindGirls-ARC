@@ -44,12 +44,14 @@ typedef enum{
 	CALayer *_arrowImage;
 	UIActivityIndicatorView *_activityView;
 	
-
 }
 
 @property(nonatomic,assign) id <EGORefreshTableHeaderDelegate> delegate;
+@property(nonatomic,assign) UITableView *superTable;
 
-- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor;
+- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor table:(UITableView*)table;
+- (id)initWithFrame:(CGRect)frame  table:(UITableView*)table;
+-(void)startRefresh;
 
 - (void)refreshLastUpdatedDate;
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
