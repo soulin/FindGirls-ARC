@@ -64,7 +64,7 @@ enum
 -(void)setupBarButtons
 {
     UIButton *nNavBtn = [[UIButton alloc] initWithFrame:NAVIGATION_BAR_BTN_RECT];
-    [nNavBtn setImage:[UIImage imageNamed:@"refresh.png"] forState:UIControlStateNormal];
+    [nNavBtn setImage:[UIImage imageNamed:@"refresh_normal.png"] forState:UIControlStateNormal];
     [nNavBtn addTarget:self action:@selector(reloadTableViewDataSource) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *nBtnItem = [[UIBarButtonItem alloc] initWithCustomView:nNavBtn];
     self.navigationItem.rightBarButtonItem = nBtnItem;
