@@ -29,8 +29,6 @@
 		9506949216983B8A00D5289E /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948A16983B8A00D5289E /* MWTapDetectingImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9506949316983B8A00D5289E /* MWTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948C16983B8A00D5289E /* MWTapDetectingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9506949416983B8A00D5289E /* MWZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948E16983B8A00D5289E /* MWZoomingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		950694E41698698400D5289E /* UINavigationController_OritationYes.m in Sources */ = {isa = PBXBuildFile; fileRef = 950694E31698698400D5289E /* UINavigationController_OritationYes.m */; };
-		950694E71698699D00D5289E /* UINavigationController_OritationNo.m in Sources */ = {isa = PBXBuildFile; fileRef = 950694E61698699D00D5289E /* UINavigationController_OritationNo.m */; };
 		950694EA16986EAD00D5289E /* UINavigationControllerForiOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = 950694E916986EAD00D5289E /* UINavigationControllerForiOS6.m */; };
 		9560041F1689C55400DEB1D2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 956003C01689C55400DEB1D2 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		956004201689C55400DEB1D2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 956003C21689C55400DEB1D2 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -156,10 +154,6 @@
 		9506948C16983B8A00D5289E /* MWTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingView.m; sourceTree = "<group>"; };
 		9506948D16983B8A00D5289E /* MWZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWZoomingScrollView.h; sourceTree = "<group>"; };
 		9506948E16983B8A00D5289E /* MWZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWZoomingScrollView.m; sourceTree = "<group>"; };
-		950694E21698698400D5289E /* UINavigationController_OritationYes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationController_OritationYes.h; sourceTree = "<group>"; };
-		950694E31698698400D5289E /* UINavigationController_OritationYes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationController_OritationYes.m; sourceTree = "<group>"; };
-		950694E51698699D00D5289E /* UINavigationController_OritationNo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationController_OritationNo.h; sourceTree = "<group>"; };
-		950694E61698699D00D5289E /* UINavigationController_OritationNo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationController_OritationNo.m; sourceTree = "<group>"; };
 		950694E816986EAD00D5289E /* UINavigationControllerForiOS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerForiOS6.h; sourceTree = "<group>"; };
 		950694E916986EAD00D5289E /* UINavigationControllerForiOS6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerForiOS6.m; sourceTree = "<group>"; };
 		956003BF1689C55400DEB1D2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -605,10 +599,6 @@
 				957369C916957C75002D1EAE /* ZJTConfigration.m */,
 				950694E816986EAD00D5289E /* UINavigationControllerForiOS6.h */,
 				950694E916986EAD00D5289E /* UINavigationControllerForiOS6.m */,
-				950694E21698698400D5289E /* UINavigationController_OritationYes.h */,
-				950694E31698698400D5289E /* UINavigationController_OritationYes.m */,
-				950694E51698699D00D5289E /* UINavigationController_OritationNo.h */,
-				950694E61698699D00D5289E /* UINavigationController_OritationNo.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -868,8 +858,6 @@
 				9506949216983B8A00D5289E /* MWTapDetectingImageView.m in Sources */,
 				9506949316983B8A00D5289E /* MWTapDetectingView.m in Sources */,
 				9506949416983B8A00D5289E /* MWZoomingScrollView.m in Sources */,
-				950694E41698698400D5289E /* UINavigationController_OritationYes.m in Sources */,
-				950694E71698699D00D5289E /* UINavigationController_OritationNo.m in Sources */,
 				950694EA16986EAD00D5289E /* UINavigationControllerForiOS6.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,6 @@
 #import "ZJTRightViewController.h"
 
 #import "DDMenuController.h"
-#import "UINavigationController_OritationNo.h"
 
 @implementation ZJTAppDelegate
 

@@ -10,8 +10,6 @@
 #import "AFJSONRequestOperation.h"
 #import "ZJTLoadMoreCell.h"
 #import "ZJTGirl.h"
-#import "UINavigationController_OritationYes.h"
-
 enum
 {
     eTableRowImages = 0,
