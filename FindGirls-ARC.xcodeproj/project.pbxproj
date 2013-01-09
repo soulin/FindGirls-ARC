@@ -23,6 +23,12 @@
 		45E1BDF016897EB700F86AE0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E1BDEF16897EB700F86AE0 /* Default@2x.png */; };
 		45E1BDF216897EB700F86AE0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E1BDF116897EB700F86AE0 /* Default-568h@2x.png */; };
 		45E1BDF516897EB700F86AE0 /* FindGirls_ARC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45E1BDF316897EB700F86AE0 /* FindGirls_ARC.xcdatamodeld */; };
+		95004C01169AC3C500D3A24A /* ZJTBaseSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95004C00169AC3C500D3A24A /* ZJTBaseSharer.m */; };
+		95004C03169AC41600D3A24A /* SharersConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95004C02169AC41600D3A24A /* SharersConfig.plist */; };
+		95004C07169AC6C800D3A24A /* ZJTSharerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 95004C06169AC6C800D3A24A /* ZJTSharerConfig.m */; };
+		95004C0A169AC6DF00D3A24A /* ZJTSharerStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95004C09169AC6DF00D3A24A /* ZJTSharerStorage.m */; };
+		95004C16169AD07B00D3A24A /* ZJTShareLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95004C14169AD07B00D3A24A /* ZJTShareLoginViewController.m */; };
+		95004C17169AD07B00D3A24A /* ZJTShareLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95004C15169AD07B00D3A24A /* ZJTShareLoginViewController.xib */; };
 		9506948F16983B8A00D5289E /* MWCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948316983B8A00D5289E /* MWCaptionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9506949016983B8A00D5289E /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948516983B8A00D5289E /* MWPhoto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9506949116983B8A00D5289E /* MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506948716983B8A00D5289E /* MWPhotoBrowser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -118,6 +124,8 @@
 		95BD42A4168B39470056D116 /* ZJTHomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BD42A2168B39470056D116 /* ZJTHomeTableCell.xib */; };
 		95BD42AA168B43290056D116 /* image_placeholdere@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BD42A9168B43290056D116 /* image_placeholdere@2x.png */; };
 		95BD42AE168B454C0056D116 /* ZJTGirl.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BD42AD168B454C0056D116 /* ZJTGirl.m */; };
+		95C8CC54169D818D0077785C /* ZJTSharerSina.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8CC53169D818C0077785C /* ZJTSharerSina.m */; };
+		95C8CC58169D81C00077785C /* ZJTSharerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8CC57169D81C00077785C /* ZJTSharerTool.m */; };
 		95FE43811697FF1400B92222 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 95FE43801697FF1400B92222 /* YLProgressBar.m */; };
 		95FE439A16980BC800B92222 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 95FE439816980BC800B92222 /* blackArrow.png */; };
 		95FE439B16980BC800B92222 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95FE439916980BC800B92222 /* blackArrow@2x.png */; };
@@ -150,6 +158,16 @@
 		45E1BDEF16897EB700F86AE0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		45E1BDF116897EB700F86AE0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		45E1BDF416897EB700F86AE0 /* FindGirls_ARC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindGirls_ARC.xcdatamodel; sourceTree = "<group>"; };
+		95004BFF169AC3C500D3A24A /* ZJTBaseSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTBaseSharer.h; sourceTree = "<group>"; };
+		95004C00169AC3C500D3A24A /* ZJTBaseSharer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTBaseSharer.m; sourceTree = "<group>"; };
+		95004C02169AC41600D3A24A /* SharersConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SharersConfig.plist; sourceTree = "<group>"; };
+		95004C05169AC6C800D3A24A /* ZJTSharerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTSharerConfig.h; sourceTree = "<group>"; };
+		95004C06169AC6C800D3A24A /* ZJTSharerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTSharerConfig.m; sourceTree = "<group>"; };
+		95004C08169AC6DF00D3A24A /* ZJTSharerStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTSharerStorage.h; sourceTree = "<group>"; };
+		95004C09169AC6DF00D3A24A /* ZJTSharerStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTSharerStorage.m; sourceTree = "<group>"; };
+		95004C13169AD07B00D3A24A /* ZJTShareLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTShareLoginViewController.h; sourceTree = "<group>"; };
+		95004C14169AD07B00D3A24A /* ZJTShareLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTShareLoginViewController.m; sourceTree = "<group>"; };
+		95004C15169AD07B00D3A24A /* ZJTShareLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJTShareLoginViewController.xib; sourceTree = "<group>"; };
 		9506948216983B8A00D5289E /* MWCaptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCaptionView.h; sourceTree = "<group>"; };
 		9506948316983B8A00D5289E /* MWCaptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWCaptionView.m; sourceTree = "<group>"; };
 		9506948416983B8A00D5289E /* MWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhoto.h; sourceTree = "<group>"; };
@@ -314,6 +332,10 @@
 		95BD42A9168B43290056D116 /* image_placeholdere@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_placeholdere@2x.png"; sourceTree = "<group>"; };
 		95BD42AC168B454C0056D116 /* ZJTGirl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTGirl.h; sourceTree = "<group>"; };
 		95BD42AD168B454C0056D116 /* ZJTGirl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTGirl.m; sourceTree = "<group>"; };
+		95C8CC52169D818C0077785C /* ZJTSharerSina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTSharerSina.h; sourceTree = "<group>"; };
+		95C8CC53169D818C0077785C /* ZJTSharerSina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTSharerSina.m; sourceTree = "<group>"; };
+		95C8CC56169D81C00077785C /* ZJTSharerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTSharerTool.h; sourceTree = "<group>"; };
+		95C8CC57169D81C00077785C /* ZJTSharerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTSharerTool.m; sourceTree = "<group>"; };
 		95FE437F1697FF1400B92222 /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
 		95FE43801697FF1400B92222 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
 		95FE43871697FF4B00B92222 /* ARCMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCMacro.h; sourceTree = "<group>"; };
@@ -439,6 +461,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		95004BFB169AC35100D3A24A /* ShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				95004C04169AC57B00D3A24A /* Models */,
+				95004BFD169AC3A100D3A24A /* Tools */,
+				95004BFE169AC3A100D3A24A /* Sharers */,
+				95004C02169AC41600D3A24A /* SharersConfig.plist */,
+			);
+			path = ShareKit;
+			sourceTree = "<group>";
+		};
+		95004BFD169AC3A100D3A24A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				95C8CC56169D81C00077785C /* ZJTSharerTool.h */,
+				95C8CC57169D81C00077785C /* ZJTSharerTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		95004BFE169AC3A100D3A24A /* Sharers */ = {
+			isa = PBXGroup;
+			children = (
+				95004BFF169AC3C500D3A24A /* ZJTBaseSharer.h */,
+				95004C00169AC3C500D3A24A /* ZJTBaseSharer.m */,
+				95C8CC52169D818C0077785C /* ZJTSharerSina.h */,
+				95C8CC53169D818C0077785C /* ZJTSharerSina.m */,
+			);
+			path = Sharers;
+			sourceTree = "<group>";
+		};
+		95004C04169AC57B00D3A24A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95004C05169AC6C800D3A24A /* ZJTSharerConfig.h */,
+				95004C06169AC6C800D3A24A /* ZJTSharerConfig.m */,
+				95004C08169AC6DF00D3A24A /* ZJTSharerStorage.h */,
+				95004C09169AC6DF00D3A24A /* ZJTSharerStorage.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9506948116983B8A00D5289E /* MWPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +526,7 @@
 		956003BC1689C55400DEB1D2 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				95004BFB169AC35100D3A24A /* ShareKit */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -700,6 +765,9 @@
 				9560046F1689CA4C00DEB1D2 /* ZJTRightViewController.h */,
 				956004701689CA4C00DEB1D2 /* ZJTRightViewController.m */,
 				956004711689CA4C00DEB1D2 /* ZJTRightViewController.xib */,
+				95004C13169AD07B00D3A24A /* ZJTShareLoginViewController.h */,
+				95004C14169AD07B00D3A24A /* ZJTShareLoginViewController.m */,
+				95004C15169AD07B00D3A24A /* ZJTShareLoginViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -830,6 +898,8 @@
 				95069506169885C000D5289E /* refresh@2x.png in Resources */,
 				956B13C916989B03003BA5CE /* refresh_normal.png in Resources */,
 				956B13CA16989B03003BA5CE /* refresh_normal@2x.png in Resources */,
+				95004C03169AC41600D3A24A /* SharersConfig.plist in Resources */,
+				95004C17169AD07B00D3A24A /* ZJTShareLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,6 +965,12 @@
 				9506949316983B8A00D5289E /* MWTapDetectingView.m in Sources */,
 				9506949416983B8A00D5289E /* MWZoomingScrollView.m in Sources */,
 				950694EA16986EAD00D5289E /* UINavigationControllerForiOS6.m in Sources */,
+				95004C01169AC3C500D3A24A /* ZJTBaseSharer.m in Sources */,
+				95004C07169AC6C800D3A24A /* ZJTSharerConfig.m in Sources */,
+				95004C0A169AC6DF00D3A24A /* ZJTSharerStorage.m in Sources */,
+				95004C16169AD07B00D3A24A /* ZJTShareLoginViewController.m in Sources */,
+				95C8CC54169D818D0077785C /* ZJTSharerSina.m in Sources */,
+				95C8CC58169D81C00077785C /* ZJTSharerTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>shares</key>
+	<array>
+		<dict>
+			<key>app key</key>
+			<string>100357013</string>
+			<key>app secrest</key>
+			<string>5efa6132191c3a6ab43a9e39604d8bba</string>
+			<key>callback URL</key>
+			<string>http://</string>
+			<key>sharer class name</key>
+			<string>ZJTSharerQQZone</string>
+			<key>oauth version</key>
+			<string>2.0</string>
+			<key>request token URL</key>
+			<string></string>
+			<key>authorization URL</key>
+			<string>https://graph.z.qq.com/moc2/authorize</string>
+			<key>access token URL</key>
+			<string>https://graph.z.qq.com/moc2/token</string>
+		</dict>
+		<dict>
+			<key>app key</key>
+			<string>3682004835</string>
+			<key>app secrest</key>
+			<string>04cae84e826a09c982c51faabe9f0ac0</string>
+			<key>callback URL</key>
+			<string>http://ok.com</string>
+			<key>cancel URL</key>
+			<string>http://cancel.com</string>
+			<key>sharer class name</key>
+			<string>ZJTSharerSina</string>
+			<key>oauth version</key>
+			<string>2.0</string>
+			<key>request token URL</key>
+			<string></string>
+			<key>authorization URL</key>
+			<string>https://api.weibo.com/oauth2/authorize</string>
+			<key>access token URL</key>
+			<string>https://api.weibo.com/oauth2/access_token</string>
+		</dict>
+	</array>
+</dict>
+</plist>

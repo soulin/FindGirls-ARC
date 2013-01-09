@@ -45,10 +45,6 @@
     frame = self.BGImageViewBottom.frame;
     frame.origin.y = _contentImageView.frame.origin.y + _contentImageView.frame.size.height;
     self.BGImageViewBottom.frame = frame;
-    
-    NSLog(@"contentImageView = %@",NSStringFromCGRect(_contentImageView.frame));
-    
-//    NSLog(@"BGImageView = %@",NSStringFromCGRect(_BGImageView.frame));
 }
 
 -(void)setProgress:(float)progress

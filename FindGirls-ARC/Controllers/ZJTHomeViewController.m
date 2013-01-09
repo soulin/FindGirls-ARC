@@ -136,13 +136,6 @@ enum
     [self doneLoadingTableViewData];
     [self hideProgressHUD:YES];
     [_table reloadData];
-    if (_girlsArr.count <= 25) {
-        [_table beginUpdates];
-        [_table scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
-                      atScrollPosition:UITableViewScrollPositionTop
-                              animated:YES];
-        [_table endUpdates];
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -184,13 +177,8 @@ enum
                                       progress:^(NSUInteger receivedSize, long long expectedSize){
                                           float progress = ((float)receivedSize / (float)expectedSize);
                                           cell.progress = progress;
-                                          NSLog(@"%f",((float)receivedSize / (float)expectedSize));
                                       }
                                      completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType){
-                                         NSLog(@"%@",NSStringFromCGSize(image.size));
-                                         NSLog(@"wid = %f hei = %f",girl.width,girl.height);
-                                         NSLog(@"cell.contentImageView = %@",NSStringFromCGRect(cell.contentImageView.frame));
-                                         NSLog(@"[girl heightForWidth:280] = %f",[girl heightForWidth:280]);
                                          
                                      }];
         return cell;
@@ -216,7 +204,6 @@ enum
     if (_girlsArr && indexPath.row < _girlsArr.count) {
         girl = [_girlsArr objectAtIndex:indexPath.row];
     }
-    NSLog(@"heightForWidth %f",[girl heightForWidth:280]);
     return [girl heightForWidth:280] + 72;
 }
 
@@ -259,8 +246,19 @@ enum
 
 - (void)reloadTableViewDataSource{
 	_reloading = YES;
-    [self showProgressHUDWithMessage:[NSString stringWithFormat:@"%@\u2026" , NSLocalizedString(@"Updating", @"Displayed with ellipsis as 'Copying...' when an item is in the process of being copied")]];    
+    [self showProgressHUDWithMessage:[NSString stringWithFormat:@"%@\u2026" , NSLocalizedString(@"Updating", @"Displayed with ellipsis as 'Copying...' when an item is in the process of being copied")]];
     
+    [_table beginUpdates];
+    [_table scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                  atScrollPosition:UITableViewScrollPositionTop
+                          animated:YES];
+    [_table endUpdates];
+    
+    [self performSelector:@selector(delayLoad) withObject:nil afterDelay:.1];
+}
+
+-(void)delayLoad
+{    
     if (_girlsArr) {
         [_girlsArr removeAllObjects];
     }

@@ -263,7 +263,25 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
 
 -(void)shareButtonPressed:(id)sender
 {
+    ZJTSharerSina *sina = [[ZJTSharerSina alloc] init];
     
+    if (sina.storage.isLogined && !sina.storage.isExpired) {
+        //post
+//        sina
+        MWPhoto *photo = (MWPhoto*)[self photoAtIndex:0];
+        [sina postText:@"test" image:photo.underlyingImage];
+    }
+    else if (sina.storage.isLogined && sina.storage.isExpired)
+    {
+        //refresh
+    }
+    else
+    {
+        //login
+        ZJTShareLoginViewController *webCtrl = [[ZJTShareLoginViewController alloc] initWithURL:sina.loginURL delegate:sina];
+        sina.delegate = webCtrl;
+        [self.navigationController pushViewController:webCtrl animated:YES];
+    }
 }
 
 - (void)performLayout {
