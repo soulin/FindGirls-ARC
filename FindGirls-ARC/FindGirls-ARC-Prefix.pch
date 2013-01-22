@@ -20,6 +20,7 @@
 #import "SDImageCache.h"
 #import "ZJTConfigration.h"
 #import "UINavigationControllerForiOS6.h"
+#import "MBProgressHUD.h"
 #endif
 
 #define NAVIGATION_BAR_BTN_RECT         CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)

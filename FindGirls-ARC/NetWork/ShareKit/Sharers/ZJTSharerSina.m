@@ -28,35 +28,89 @@
     return self;
 }
 
-
 -(void)postText:(NSString*)text image:(UIImage*)image
 {
-//    NSData *data = UIImageJPEGRepresentation(image, 1.0);
-//    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-//                            self.storage.accessToken,   @"access_token",
-//                            text,                       @"status",
-//                            data,                       @"pic",nil];
-//    
-//    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com"];
-//    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-//    NSString *_path = [NSString stringWithFormat:@"/2/statuses/upload.json"];
-//    
-//    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
-//                                                            path:_path
-//                                                      parameters:params];
-//    
-//    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:request];
-//    [operation setCompletionBlockWithSuccess:
-//     ^(AFHTTPRequestOperation *operation, id responseObject)
-//    { //下載成功之後，使用JSONKit將字串轉成NSDictionary或NSArray 格式
-//        NSLog(@"responseString = %@",operation.responseString);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
-//     {
-//            //下載失敗之後處理
-//        
-//     }];
-//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-//    [queue addOperation:operation];
+    
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
+    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/statuses/upload.json"];
+    ASIFormDataRequest *item = [[ASIFormDataRequest alloc] initWithURL:url];
+    
+    [item setPostValue:self.storage.accessToken    forKey:@"access_token"];
+    [item setPostValue:text         forKey:@"status"];
+    [item addData:data              forKey:@"pic"];
+    
+    item.tag = 1.0;
+    item.delegate = self;
+    [item startAsynchronous];
+    
+    
+    UIView *window = [UIApplication sharedApplication].keyWindow;
+    self.HUD = [[MBProgressHUD alloc] initWithView:window];
+	[window addSubview:self.HUD];
+	
+    self.HUD.delegate = self;
+    self.HUD.labelText = NSLocalizedString(@"Sending", nil);
+    
+    [self.HUD show:YES];
+}
+
+-(void)completedWithString:(NSString*)string
+{
+	self.HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+	self.HUD.mode = MBProgressHUDModeCustomView;
+	self.HUD.labelText = string;
+    
+    [self.HUD performSelector:@selector(hide:)
+                   withObject:[NSNumber numberWithBool:YES]
+                   afterDelay:2.0];
+}
+
+-(void)myTask
+{
+    sleep(2);
+}
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    NSString *responseString = request.responseString;
+    NSLog(@"responseString = %@",responseString);
+    [self completedWithString:NSLocalizedString(@"Completed", nil)];
+    
+    //认证失败
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    id  returnObject = [parser objectWithString:responseString];
+    if ([returnObject isKindOfClass:[NSDictionary class]]) {
+        NSString *errorString = [returnObject  objectForKey:@"error"];
+        if (errorString != nil && ([errorString isEqualToString:@"auth faild!"] ||
+                                   [errorString isEqualToString:@"expired_token"] ||
+                                   [errorString isEqualToString:@"invalid_access_token"])) {
+            
+            NSLog(@"detected auth faild!");
+        }
+    }
+    
+    NSDictionary *userInfo = nil;
+    NSArray *userArr = nil;
+    if ([returnObject isKindOfClass:[NSDictionary class]]) {
+        userInfo = (NSDictionary*)returnObject;
+    }
+    else if ([returnObject isKindOfClass:[NSArray class]]) {
+        userArr = (NSArray*)returnObject;
+    }
+    else {
+        return;
+    }
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{    
+    [self completedWithString:NSLocalizedString(@"Sent Failed", nil)];
+}
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [self.HUD removeFromSuperview];
+	self.HUD = nil;
 }
 
 @end

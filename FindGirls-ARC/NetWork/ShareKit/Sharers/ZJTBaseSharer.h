@@ -26,7 +26,10 @@
 //ZJTBaseSharer
 @protocol ZJTBaseSharerDelegate;
 
-@interface ZJTBaseSharer : NSObject<ZJTShareLoginViewControllerDelegate>
+@interface ZJTBaseSharer : NSObject
+<ZJTShareLoginViewControllerDelegate,ASIHTTPRequestDelegate,MBProgressHUDDelegate>
+{
+}
 
 @property (nonatomic,strong) ZJTSharerConfig *config;
 @property (nonatomic,strong) ZJTSharerStorage *storage;
@@ -35,6 +38,7 @@
 @property (nonatomic,strong) NSDictionary *authorizationParams;
 
 @property (nonatomic,strong) NSURL *loginURL;
+@property (nonatomic,strong) MBProgressHUD *HUD;
 
 @property (nonatomic,weak) id<ZJTBaseSharerDelegate> delegate;
 
