@@ -74,7 +74,6 @@
 {
     NSString *responseString = request.responseString;
     NSLog(@"responseString = %@",responseString);
-    [self completedWithString:NSLocalizedString(@"Completed", nil)];
     
     //认证失败
     SBJsonParser *parser = [[SBJsonParser alloc] init];
@@ -86,7 +85,16 @@
                                    [errorString isEqualToString:@"invalid_access_token"])) {
             
             NSLog(@"detected auth faild!");
+            [self completedWithString:NSLocalizedString(@"Send failed", nil)];
         }
+        else
+        {            
+            [self completedWithString:NSLocalizedString(@"Completed", nil)];
+        }
+    }
+    else
+    {        
+        [self completedWithString:NSLocalizedString(@"Completed", nil)];
     }
     
     NSDictionary *userInfo = nil;

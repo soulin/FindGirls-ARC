@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic,strong) NSURL *loadURL;
+@property (nonatomic,strong) UIImage *shareImage;
 @property (nonatomic,weak) id<ZJTShareLoginViewControllerDelegate> delegate;
 
 -(id)initWithURL:(NSURL*)url

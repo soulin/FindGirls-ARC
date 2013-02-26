@@ -61,7 +61,7 @@
                 
                 storage.accessToken = token;
                 storage.uid = uid;
-                storage.expireDate = [NSDate dateWithTimeIntervalSince1970:expiresIn.longLongValue];
+                storage.expireDate = [NSDate dateWithTimeIntervalSinceNow:expiresIn.longLongValue];
                 
                 self.storage = storage;
                 [ZJTSharerTool saveStorage:storage

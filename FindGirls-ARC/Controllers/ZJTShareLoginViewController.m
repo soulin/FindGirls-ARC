@@ -7,6 +7,7 @@
 //
 
 #import "ZJTShareLoginViewController.h"
+#import "ZJTSharerSina.h"
 
 @interface ZJTShareLoginViewController ()
 
@@ -65,7 +66,25 @@
 
 -(void)sharer:(ZJTBaseSharer*)sharer didGetAccessToken:(NSString *)token
 {
+    if ([sharer isKindOfClass:[ZJTSharerSina class]])
+    {
+        ZJTSharerSina *sina = (ZJTSharerSina*)sharer;
+        if (sina.storage.isLogined && !sina.storage.isExpired) {
+            //post
+            //        sina
+            if (self.shareImage) {
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"HH:mm:ss"];
+                NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];
+                
+                [sina postText:[NSString stringWithFormat:@"#妹子图 for iPhone# %@",currentDateStr]
+                         image:self.shareImage];
+            }
+        }
+    }
     [self.navigationController popViewControllerAnimated:YES];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ZJTSharerDidLoginNotification" object:nil];
+
 }
 
 @end

@@ -22,6 +22,11 @@
 #define PAGE_INDEX_TAG_OFFSET   1000
 #define PAGE_INDEX(page)        ([(page) tag] - PAGE_INDEX_TAG_OFFSET)
 
+enum
+{
+    eActionSheetShare = 0,
+    eActionSheetAction,
+};
 // Private
 @interface MWPhotoBrowser () {
     
@@ -263,25 +268,9 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
 
 -(void)shareButtonPressed:(id)sender
 {
-    ZJTSharerSina *sina = [[ZJTSharerSina alloc] init];
-    
-    if (sina.storage.isLogined && !sina.storage.isExpired) {
-        //post
-//        sina
-        MWPhoto *photo = (MWPhoto*)[self photoAtIndex:0];
-        [sina postText:@"test" image:photo.underlyingImage];
-    }
-    else if (sina.storage.isLogined && sina.storage.isExpired)
-    {
-        //refresh
-    }
-    else
-    {
-        //login
-        ZJTShareLoginViewController *webCtrl = [[ZJTShareLoginViewController alloc] initWithURL:sina.loginURL delegate:sina];
-        sina.delegate = webCtrl;
-        [self.navigationController pushViewController:webCtrl animated:YES];
-    }
+    UIActionSheet *ac = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Sina WeiBo", nil), nil];
+    ac.tag = eActionSheetShare;
+    [ac showInView:self.view];
 }
 
 - (void)performLayout {
@@ -1050,6 +1039,7 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
                                                         cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil
                                                         otherButtonTitles:NSLocalizedString(@"Save", nil), NSLocalizedString(@"Copy", nil), nil] autorelease];
             }
+            _actionsSheet.tag = eActionSheetAction;
             _actionsSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
                 [_actionsSheet showFromBarButtonItem:sender animated:YES];
@@ -1064,20 +1054,63 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
 #pragma mark - Action Sheet Delegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (actionSheet == _actionsSheet) {           
-        // Actions 
-        self.actionsSheet = nil;
-        if (buttonIndex != actionSheet.cancelButtonIndex) {
-            if (buttonIndex == actionSheet.firstOtherButtonIndex) {
-                [self savePhoto]; return;
-            } else if (buttonIndex == actionSheet.firstOtherButtonIndex + 1) {
-                [self copyPhoto]; return;	
-            } else if (buttonIndex == actionSheet.firstOtherButtonIndex + 2) {
-                [self emailPhoto]; return;
+    if (actionSheet.tag == eActionSheetAction) {
+        if (actionSheet == _actionsSheet) {
+            // Actions
+            self.actionsSheet = nil;
+            if (buttonIndex != actionSheet.cancelButtonIndex) {
+                if (buttonIndex == actionSheet.firstOtherButtonIndex) {
+                    [self savePhoto]; return;
+                } else if (buttonIndex == actionSheet.firstOtherButtonIndex + 1) {
+                    [self copyPhoto]; return;
+                } else if (buttonIndex == actionSheet.firstOtherButtonIndex + 2) {
+                    [self emailPhoto]; return;
+                }
             }
         }
+        [self hideControlsAfterDelay]; // Continue as normal...
     }
-    [self hideControlsAfterDelay]; // Continue as normal...
+    else if (actionSheet.tag == eActionSheetShare)
+    {
+        
+        if (buttonIndex == actionSheet.firstOtherButtonIndex) {
+            
+            ZJTSharerSina *sina = [[ZJTSharerSina alloc] init];
+            
+            if (sina.storage.isLogined && !sina.storage.isExpired) {
+                //post
+                //        sina
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];                
+                [dateFormatter setDateFormat:@"HH:mm:ss"];                
+                NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];    
+                
+                MWPhoto *photo = (MWPhoto*)[self photoAtIndex:0];
+                [sina postText:[NSString stringWithFormat:@"#妹子图 for iPhone# %@",currentDateStr]
+                         image:photo.underlyingImage];
+            }
+            else if (sina.storage.isLogined && sina.storage.isExpired)
+            {
+                //refresh
+                //login
+                ZJTShareLoginViewController *webCtrl = [[ZJTShareLoginViewController alloc] initWithURL:sina.loginURL delegate:sina];
+                sina.delegate = webCtrl;
+                MWPhoto *photo = (MWPhoto*)[self photoAtIndex:0];
+                webCtrl.shareImage = photo.underlyingImage;
+                
+                [self.navigationController pushViewController:webCtrl animated:YES];
+            }
+            else
+            {
+                //login
+                ZJTShareLoginViewController *webCtrl = [[ZJTShareLoginViewController alloc] initWithURL:sina.loginURL delegate:sina];
+                sina.delegate = webCtrl;
+                MWPhoto *photo = (MWPhoto*)[self photoAtIndex:0];
+                webCtrl.shareImage = photo.underlyingImage;
+                [self.navigationController pushViewController:webCtrl animated:YES];
+            }
+
+        }
+    }
 }
 
 #pragma mark - MBProgressHUD

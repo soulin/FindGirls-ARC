@@ -77,19 +77,19 @@
 {
     if ([_oauthVersion isEqualToString:@"1.0"]) {
         if (_accessKey == nil || _accessKey.length == 0) {
-            return NO;
+            return YES;
         }
     }
     else if([_oauthVersion isEqualToString:@"2.0"]){
         if (_accessToken == nil || _accessToken.length == 0) {
-            return NO;
+            return YES;
         }
         else if (NSOrderedDescending != [_expireDate compare:[NSDate date]])
         {
-            return NO;
+            return YES;
         }
     }
-    return YES;
+    return NO;
 }
 
 -(BOOL)isLogined

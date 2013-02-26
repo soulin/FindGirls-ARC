@@ -1009,7 +1009,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianting Zhu (HU3KEKHK5W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianting Zhu (HU3KEKHK5W)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1024,6 +1025,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "6E0D518F-6744-4244-A02D-1AC6D5949CEA";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1037,7 +1039,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jian Ting Zhu";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jian Ting Zhu";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1046,6 +1049,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "1119225C-4158-413D-9B9E-693686B0604B";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1054,6 +1058,8 @@
 		45E1BDF916897EB700F86AE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianting Zhu (HU3KEKHK5W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianting Zhu (HU3KEKHK5W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindGirls-ARC/FindGirls-ARC-Prefix.pch";
 				INFOPLIST_FILE = "FindGirls-ARC/FindGirls-ARC-Info.plist";
@@ -1063,6 +1069,7 @@
 					"\"$(SRCROOT)/FindGirls-ARC/ThirdParty/Admob\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6E0D518F-6744-4244-A02D-1AC6D5949CEA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1070,6 +1077,8 @@
 		45E1BDFA16897EB700F86AE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jian Ting Zhu";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jian Ting Zhu";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FindGirls-ARC/FindGirls-ARC-Prefix.pch";
 				INFOPLIST_FILE = "FindGirls-ARC/FindGirls-ARC-Info.plist";
@@ -1079,6 +1088,7 @@
 					"\"$(SRCROOT)/FindGirls-ARC/ThirdParty/Admob\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1119225C-4158-413D-9B9E-693686B0604B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
